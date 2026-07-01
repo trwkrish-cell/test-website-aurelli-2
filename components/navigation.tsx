@@ -45,18 +45,18 @@ export function Navigation() {
       )}
     >
       <nav
-        className="relative mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5 sm:h-[4.5rem] sm:px-8"
+        className="mx-auto flex h-16 max-w-[1200px] items-center px-5 sm:h-[4.5rem] sm:px-8"
         aria-label="Primary"
       >
         <a
           href="#top"
-          className="font-serif text-2xl font-medium tracking-wide text-foreground lg:text-3xl"
+          className="flex-1 font-serif text-2xl font-medium tracking-wide text-foreground lg:text-3xl"
         >
           Aurelia
         </a>
 
-        {/* Desktop links — absolutely centred so logo & CTA don't affect position */}
-        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex lg:gap-14">
+        {/* Desktop links — flex-1 on both sides guarantees dead-centre between logo and phone */}
+        <ul className="hidden items-center gap-10 md:flex lg:gap-14">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
@@ -69,7 +69,7 @@ export function Navigation() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-2 sm:gap-3 lg:gap-6">
+        <div className="flex flex-1 items-center justify-end gap-2 sm:gap-3 lg:gap-6">
           {/* Mobile/tablet: icon link + plain number. Desktop: plain number only, no icon, not clickable. */}
           <a
             href="tel:+14805550197"
