@@ -36,7 +36,6 @@ export function Services() {
 
         <Reveal stagger className="mt-6 -mx-2.5 flex flex-col gap-2.5 sm:mt-14 sm:mx-0 sm:gap-5">
           {services.map((service) => {
-            const Icon = service.icon
             const open = expanded === service.id
             return (
               <RevealItem
@@ -50,14 +49,9 @@ export function Services() {
                 <div className="flex w-full flex-row gap-3 sm:gap-6">
                   {/* Left: text content — 50% on both mobile and desktop */}
                   <div className="flex w-1/2 min-w-0 flex-col">
-                    <div className="flex items-center gap-2 sm:gap-3">
-                      <span className="flex size-8 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-accent-foreground sm:size-12 sm:rounded-2xl">
-                        <Icon className="size-4 sm:size-6" />
-                      </span>
-                      <h3 className="text-[0.85rem] font-medium leading-tight text-foreground sm:text-2xl">
-                        {service.name}
-                      </h3>
-                    </div>
+                    <h3 className="text-[0.85rem] font-medium leading-tight text-foreground sm:text-2xl">
+                      {service.name}
+                    </h3>
                     <div className="mt-2 flex items-center gap-2 text-[0.85rem] font-medium text-accent sm:mt-3 sm:gap-3 sm:text-sm">
                       <span>{service.price}</span>
                       <span className="text-border">•</span>
