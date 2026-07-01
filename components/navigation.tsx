@@ -45,7 +45,7 @@ export function Navigation() {
       )}
     >
       <nav
-        className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5 sm:h-[4.5rem] sm:px-8"
+        className="relative mx-auto flex h-16 max-w-[1200px] items-center justify-between px-5 sm:h-[4.5rem] sm:px-8"
         aria-label="Primary"
       >
         <a
@@ -55,7 +55,8 @@ export function Navigation() {
           Aurelia
         </a>
 
-        <ul className="hidden items-center gap-6 md:flex lg:gap-7">
+        {/* Desktop links — absolutely centred so logo & CTA don't affect position */}
+        <ul className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex lg:gap-14">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
