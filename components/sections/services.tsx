@@ -48,8 +48,8 @@ export function Services() {
                 {/* Row: text column + image column, 50/50, never wraps */}
                 <div className="flex w-full flex-row gap-3 sm:gap-6">
                   {/* Left: text content — 50% on both mobile and desktop */}
-                  <div className="flex w-1/2 min-w-0 flex-col">
-                    <h3 className="text-[0.85rem] font-medium leading-tight text-foreground sm:text-2xl">
+                  <div className="flex w-1/2 min-w-0 flex-col pl-2 sm:pl-0">
+                    <h3 className="pl-1 text-[0.85rem] font-medium leading-tight text-foreground sm:pl-0 sm:text-2xl">
                       {service.name}
                     </h3>
                     <div className="mt-2 flex items-center gap-2 text-[0.85rem] font-medium text-accent sm:mt-3 sm:gap-3 sm:text-sm">
